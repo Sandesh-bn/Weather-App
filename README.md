@@ -1,1 +1,1 @@
-![Alt text](https://github.com/Sandesh-bn/Weather-App/blob/master/screenshot.gif)
+![Screenshot](https://github.com/Sandesh-bn/Weather-App/blob/master/screenshot.gif)
