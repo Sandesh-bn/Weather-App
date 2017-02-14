@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/mainScreen"
+
+    tools:context="apps.sandesh.multiscreenlayoutexp.FragmentA"
+    android:paddingTop="30dp">
+
+   <EditText
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:inputType="textPersonName"
+       android:ems="10"
+       android:id="@+id/cityInput"
+       android:backgroundTint="@android:color/white"
+       android:selectAllOnFocus="true"
+       android:hint="@string/city_input"
+       android:elevation="14dp"
+       android:textColor = "#bdbdbd"
+
+       android:layout_marginTop="12dp"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_marginLeft="25dp"
+       android:layout_marginStart="25dp"
+       android:fontFamily="sans-serif-light"
+       android:textSize="24sp" />
+
+   <Button
+       android:id="@+id/search_button"
+       android:onClick="showWeatherOnMainScreen"
+       android:elevation="10dp"
+       style="@style/Widget.AppCompat.Button"
+       android:background="@android:drawable/ic_menu_search"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_alignBottom="@+id/cityInput"
+       android:layout_toRightOf="@+id/cityInput"
+       android:layout_toEndOf="@+id/cityInput" />
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/resultImage"
+
+       android:layout_below="@+id/cityInput"
+       android:layout_centerHorizontal="true"
+       android:scaleX="0.8"
+       android:scaleY="0.8" />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/resultImage"
+       android:text=""
+       android:textColor="#fafafa"
+       android:id="@+id/location_main_screen"
+       android:textAppearance="@style/TextAppearance.AppCompat.Large"
+       android:layout_centerHorizontal="true"
+       />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:textColor="#fafafa"
+       android:layout_below="@id/location_main_screen"
+       android:textAppearance="@style/TextAppearance.AppCompat.Large"
+       android:layout_centerHorizontal="true"
+       android:id="@+id/condition_text_main_screen"
+       />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginBottom="16dp">
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Show Map"
+       android:onClick="showMap"
+       android:background="@drawable/transparent_gradient"
+       android:layout_toLeftOf="@+id/today_button"
+       android:id="@+id/show_map_button"
+       android:textColor="#dadada"
+       />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="1 Day"
+       android:onClick="darkWeatherToday"
+       android:id="@+id/today_button"
+       android:layout_centerHorizontal="true"
+       android:layout_marginLeft="16dp"
+       android:layout_marginRight="16dp"
+       android:textColor="#dadada"
+       />
+
+
+
+
+   <TextView
+       android:text="1 Week"
+       android:onClick="darkWeatherMultiday"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#dadada"
+       android:layout_toRightOf="@id/today_button"
+       android:id="@+id/multi_day_button"
+       />
+
+   </RelativeLayout>
+
+</RelativeLayout>
